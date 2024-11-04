@@ -1,0 +1,20 @@
+<div class="admin-container">
+    <button class="logout-button" (click)="logout()">Logout</button>
+    
+    <div class="sidebar">
+      <ul>
+        <a class="menu-item" routerLink="employee-list" routerLinkActive="active">List of All Employees</a>
+        <a class="menu-item" routerLink="employee-data-form" routerLinkActive="active">Employee Data Form</a>
+        <a class="menu-item" routerLink="employee-tasks" routerLinkActive="active">Employee Tasks</a>
+        <a class="menu-item" routerLink="add-task" routerLinkActive="active">Add New Task</a>
+      </ul>
+    </div>
+  
+    <div class="content">
+      <h1>WELCOME TO THE ADMIN DASHBOARD!</h1>
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+  
+  
+  
