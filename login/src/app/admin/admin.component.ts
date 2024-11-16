@@ -6,6 +6,7 @@ import { Router } from '@angular/router';
   templateUrl: './admin.component.html',
   styleUrls: ['./admin.component.css']
 })
+
 export class AdminComponent {
   constructor(private router: Router) {}
 
@@ -14,5 +15,3 @@ export class AdminComponent {
     this.router.navigate(['/']);
   }
 }
-
-

@@ -1,0 +1,135 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th, td {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tr:hover {
+  background-color: #e2e2ff;
+}
+
+tr.selected {
+  background-color: #e9f7ff;
+  font-weight: bold;
+}
+
+.employee-actions-left {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+}
+
+.employee-actions-left button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.employee-actions-left button:hover {
+  opacity: 0.9;
+}
+
+.employee-actions-left button:disabled {
+  background-color: #c0c0c0;
+  cursor: not-allowed;
+}
+
+.employee-actions-left button:first-child {
+  background-color: #007bff;
+  color: white;
+}
+
+.employee-actions-left button:first-child:hover {
+  background-color: #0056b3;
+}
+
+.edit-button {
+  background-color: #ffc107;
+  color: white;
+}
+
+.edit-button:hover {
+  background-color: #e0a800;
+}
+
+.delete-button {
+  background-color: #dc3545;
+  color: white;
+}
+
+.delete-button:hover {
+  background-color: #c82333;
+}
+
+.employee-form {
+  padding: 10px;
+}
+
+.employee-form label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.employee-form input[type="text"],
+.employee-form select {
+  width: 100%;
+  padding: 6px;
+  font-size: 0.875rem;
+  margin-top: 4px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.form-buttons {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.form-buttons button {
+  padding: 6px 12px;
+  font-size: 12px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.form-buttons button[type="submit"] {
+  background-color: #28a745;
+  color: white;
+}
+
+.form-buttons button[type="submit"]:hover {
+  background-color: #218838;
+}
+
+.form-buttons button[type="button"] {
+  background-color: #dc3545;
+  color: white;
+}
+
+.form-buttons button[type="button"]:hover {
+  background-color: #c82333;
+}

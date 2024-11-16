@@ -3,9 +3,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { AdminComponent } from './admin/admin.component';
 import { LoginComponent } from './login/login.component'; 
 import { EmployeeListComponent } from './employee-list/employee-list.component';
-import { EmployeeDataFormComponent } from './employee-data-form/employee-data-form.component';
 import { EmployeeTasksComponent } from './employee-tasks/employee-tasks.component';
 import { AddTaskComponent } from './add-task/add-task.component';
+import { EmployeeDataFormComponent } from './employee-data-form/employee-data-form.component';
 
 const routes: Routes = [
   { 

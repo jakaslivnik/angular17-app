@@ -1,1 +1,81 @@
-<p>You will see a data of all employees here!</p>
+<div class="employee-form-container">
+  <h2>Employee Data Form</h2>
+  <form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
+    <div class="form-group form-row">
+      <div class="form-group col">
+        <label for="firstName">First Name</label>
+        <input id="firstName" formControlName="firstName" type="text" class="form-control" />
+      </div>
+      <div class="form-group col">
+        <label for="lastName">Last Name</label>
+        <input id="lastName" formControlName="lastName" type="text" class="form-control" />
+      </div>
+    </div>
+
+    <div class="form-group form-row">
+      <div class="form-group col">
+        <label for="email">Email</label>
+        <input id="email" formControlName="email" type="email" class="form-control" />
+      </div>
+      <div class="form-group col">
+        <label for="phone">Phone Number</label>
+        <input id="phone" formControlName="phone" type="text" class="form-control" />
+      </div>
+    </div>
+
+<div class="form-group form-row">
+  <div class="form-group col">
+    <label for="position">Position</label>
+    <input id="position" formControlName="position" type="text" class="form-control" />
+  </div>
+</div>
+
+    <div class="form-group form-row">
+      <div class="form-group col">
+        <label for="day">Day</label>
+        <select id="day" formControlName="day" class="form-control">
+          <option value="">Select Day</option>
+          <option *ngFor="let day of days" [value]="day">{{ day }}</option>
+        </select>
+      </div>
+      <div class="form-group col">
+        <label for="month">Month</label>
+        <select id="month" formControlName="month" class="form-control">
+          <option value="">Select Month</option>
+          <option value="1">January</option>
+          <option value="2">February</option>
+          <option value="3">March</option>
+          <option value="4">April</option>
+          <option value="5">May</option>
+          <option value="6">June</option>
+          <option value="7">July</option>
+          <option value="8">August</option>
+          <option value="9">September</option>
+          <option value="10">October</option>
+          <option value="11">November</option>
+          <option value="12">December</option>
+        </select>
+      </div>
+      <div class="form-group col">
+        <label for="year">Year</label>
+        <input id="year" formControlName="year" type="number" class="form-control" min="1900" max="2024" />
+      </div>
+    </div>
+
+    <div class="form-group form-row">
+      <div class="form-group col">
+        <label for="city">City</label>
+        <input id="city" formControlName="city" type="text" class="form-control" />
+      </div>
+      <div class="form-group col">
+        <label for="country">Country</label>
+        <input id="country" formControlName="country" type="text" class="form-control" />
+      </div>
+    </div>
+
+    <div class="button-container">
+      <button type="button" class="btn btn-success" (click)="onSave()">Save</button>
+      <button type="button" class="btn btn-danger" (click)="onDelete()">Delete</button>
+    </div>
+  </form>
+</div>

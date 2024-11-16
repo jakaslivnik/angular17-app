@@ -1,1 +1,71 @@
-<p>You will see a list of all employees here!</p>
+<div class="employee-actions-left">
+  <button (click)="toggleAddEmployeeForm()">Add New Employee</button>
+  <button (click)="toggleEditEmployeeForm()" [disabled]="!selectedEmployee" class="edit-button">
+    Edit Employee
+  </button>
+  <button (click)="deleteSelectedEmployee()" [disabled]="!selectedEmployee" class="delete-button">
+    Delete Selected Employee
+  </button>
+</div>
+
+<div *ngIf="showAddEmployeeForm || showEditEmployeeForm" class="employee-form">
+  <h3>{{ showEditEmployeeForm ? 'Edit Employee' : 'Add New Employee' }}</h3>
+  <form [formGroup]="employeeForm" (ngSubmit)="showEditEmployeeForm ? updateEmployee() : addEmployee()">
+    <label>First Name:</label>
+    <input type="text" formControlName="name" />
+
+    <label>Last Name:</label>
+    <input type="text" formControlName="surname" />
+
+    <label>Position:</label>
+    <input type="text" formControlName="position" />
+
+    <label>Sex:</label>
+    <select formControlName="sex">
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+    </select>
+
+    <label>Year of Birth:</label>
+    <select formControlName="yearOfBirth">
+      <option *ngFor="let year of yearsList" [value]="year">{{ year }}</option>
+    </select>
+
+    <label>Country:</label>
+    <input type="text" formControlName="country" />
+
+    <div class="form-buttons">
+      <button type="submit" class="btn-add">Add Employee</button>
+      <button type="button" class="btn-close" (click)="showAddEmployeeForm = false; showEditEmployeeForm = false;">Close</button>
+    </div>
+  </form>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Position</th>
+      <th>Sex</th>
+      <th>Year of Birth</th>
+      <th>Country</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr
+      *ngFor="let employee of employees; let i = index"
+      (click)="selectEmployee(employee)"
+      [class.selected]="employee === selectedEmployee"
+    >
+      <td>{{ employee.id }}</td>
+      <td>{{ employee.name }}</td>
+      <td>{{ employee.surname }}</td>
+      <td>{{ employee.position }}</td>
+      <td>{{ employee.sex }}</td>
+      <td>{{ employee.yearOfBirth }}</td>
+      <td>{{ employee.country }}</td>
+    </tr>
+  </tbody>
+</table>

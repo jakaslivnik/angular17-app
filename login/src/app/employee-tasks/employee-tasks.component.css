@@ -1,0 +1,158 @@
+.employee-tasks-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  background-color: #fff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  margin-bottom: 16px;
+}
+
+.employee-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.employee-photo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 16px;
+}
+
+.employee-info {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 8px;
+}
+
+.employee-info label {
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.employee-info input {
+  padding: 4px 8px;
+  font-size: 0.9rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.employee-info input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.employee-tasks h6 {
+  font-family: "MyFont";
+  font-size: 16px;
+  margin-top: 0;
+}
+
+.employee-tasks ul {
+  list-style: none;
+  padding: 0;
+}
+
+.employee-tasks li {
+  display: flex;
+  justify-content: space-between;
+  margin: 4px 0;
+  cursor: pointer;
+}
+
+.employee-tasks li.selected {
+  background-color: #f0f8ff;
+  border-left: 4px solid #007bff;
+}
+
+.employee-tasks .completed {
+  color: green;
+}
+
+.employee-tasks li span:first-child {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 80%;
+}
+
+.add-task {
+  margin-top: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.new-task-input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 70%;
+}
+
+.add-task-btn,
+.toggle-btn,
+.delete-btn,
+.add-new-btn {
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  cursor: pointer;
+  border: none;
+}
+
+.add-task-btn {
+  background-color: #007bff;
+  color: white;
+  margin-right: 5px;
+}
+
+.add-task-btn:hover {
+  background-color: #0056b3;
+}
+
+.toggle-btn {
+  background-color: #f0ad4e;
+  color: white;
+}
+
+.toggle-btn:hover {
+  background-color: #ec971f;
+}
+
+.delete-btn {
+  background-color: #dc3545;
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #c82333;
+}
+
+.delete-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.add-new-btn {
+  background-color: #007bff;
+  color: white;
+  margin-right: 8px;
+}
+
+.add-new-btn:hover {
+  background-color: #0056b3;
+}
+
+.employee-tasks-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 10px;
+}
+
+.employee-tasks-card.selected-card {
+  border: 2px solid #007bff;
+  background-color: #f0f8ff;
+}
