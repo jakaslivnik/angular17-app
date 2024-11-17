@@ -60,3 +60,8 @@
   font-family: "MyFont";
   font-size: 40px;
 }
+
+.content p {
+  font-family: "MyFont";
+  font-size: 16px;
+}
